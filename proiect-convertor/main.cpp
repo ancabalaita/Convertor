@@ -194,6 +194,7 @@ int main()
 {
     unsigned short alegere,unitate1,unitate2;
     long double valoare;
+    start:
     cout << "CONVERTOR\n\n";
     cout << "Apasati '1' pentru Lungime.\nApasati '2' pentru Arie.\nApasati '3' pentru Volum.\nApasati '4' pentru Timp.\nApasati '5' pentru Viteza.\nApasati '6' pentru Temperatura.\nApasati '7' pentru Masa.\nApasati '8' pentru Energie.\nApasati '9' pentru Presiune.\nApasati '10' pentru Densitate.\nApasati '11' pentru Consum conbustibil.\n" << endl;
     cin >> alegere;
@@ -430,7 +431,7 @@ int main()
         }
         cout<<endl;
         break;
-        /*cout<<endl<<"Apasati '1' pentru a continua.\nApasati '0' pentru a iesi.";
+        cout<<endl<<"Apasati '1' pentru a continua.\nApasati '0' pentru a iesi.";
         bool x;
         cin>>x;
         while(x!=0&&x!=1)
@@ -439,7 +440,7 @@ int main()
             cin>>x;
         }
         if(x==1)
-            goto start;*/
+            goto start;
 
     }
     return 0;
