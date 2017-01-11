@@ -139,54 +139,229 @@ void Volum(unsigned short unitate1, unsigned short unitate2,long double &valoare
     {
     case 1:
         valoare=valoare;
+        break;
     case 2:
-        valoare=valoare/10;
+        valoare=valoare/100000;
+        break;
     case 3:
-        valoare=valoare/100;
+        valoare=valoare/1000000;
+        break;
     case 4:
-        valoare=valoare/1000;
+        valoare=valoare/10000;
+        break;
     case 5:
         valoare=valoare/1000;
+        break;
     case 6:
-        valoare=valoare*3.785;
+        valoare=valoare/35.31;
+        break;
     case 7:
-        valoare=valoare*1000;
+        valoare=valoare/220;
+        break;
     case 8:
-        valoare=valoare*0.016387064;
+        valoare=valoare/61023.7440947;
+        break;
     case 9:
-        valoare=valoare*764.56;
+        valoare=valoare/1000;
+        break;
     case 10:
-        valoare=valoare;
+        valoare=valoare/1000000;
+        break;
     case 11:
-        valoare=valoare*28.32;
-
+        valoare=valoare/1.308;
+        break;
 
     }
     switch(unitate2)
     {
     case 1:
         valoare=valoare;
+        break;
     case 2:
-        valoare=valoare*10;
+        valoare=valoare*100000;
+        break;
     case 3:
-        valoare=valoare*100;
+        valoare=valoare*1000000;
+        break;
     case 4:
-        valoare=valoare*1000;
+        valoare=valoare*10000;
+        break;
     case 5:
         valoare=valoare*1000;
+        break;
     case 6:
-        valoare=valoare/3.785;
+        valoare=valoare*35.31;
+        break;
     case 7:
-        valoare=valoare/1000;
+        valoare=valoare*220;
+        break;
     case 8:
-        valoare=valoare/0.016387064;
+        valoare=valoare*61023.7440947;
+        break;
     case 9:
-        valoare=valoare/764.56;
+        valoare=valoare*1000;
+        break;
     case 10:
-        valoare=valoare;
+        valoare=valoare*1000000;
+        break;
     case 11:
-        valoare=valoare/28.32;
+        valoare=valoare*1.308;
+        break;
 
+    }
+}
+
+void Timp(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+    case 2:
+        valoare=valoare/1.65344e-6;
+        break;
+    case 3:
+        valoare=valoare/1.15741e-5;
+        break;
+    case 4:
+        valoare=valoare/0.000277778;
+        break;
+    case 5:
+        valoare=valoare/0.166667;
+        break;
+    case 6:
+        valoare=valoare/10;
+        break;
+    case 7:
+        valoare=valoare/100;
+        break;
+    case 8:
+        valoare=valoare/1000;
+        break;
+    case 9:
+        valoare=valoare/1000000;
+        break;
+    case 10:
+        valoare=valoare/1000000000;
+        break;
+    }
+
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+    case 2:
+        valoare=valoare*1.65344e-6;
+        break;
+    case 3:
+        valoare=valoare*1.15741e-5;
+        break;
+    case 4:
+        valoare=valoare*0.000277778;
+        break;
+    case 5:
+        valoare=valoare*0.166667;
+        break;
+    case 6:
+        valoare=valoare*10;
+        break;
+    case 7:
+        valoare=valoare*100;
+        break;
+    case 8:
+        valoare=valoare*1000;
+        break;
+    case 9:
+        valoare=valoare*1000000;
+        break;
+    case 10:
+        valoare=valoare*1000000000;
+        break;
+    }
+}
+
+void Viteza(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+    case 2:
+        valoare=valoare/6000;
+        break;
+    case 3:
+        valoare=valoare/100;
+        break;
+    case 4:
+        valoare=valoare/11810.9771221;
+        break;
+    case 5:
+        valoare=valoare/196.8503937;
+        break;
+    case 6:
+        valoare=valoare/3.28083;
+        break;
+    case 7:
+        valoare=valoare/39.3700787;
+        break;
+    case 8:
+        valoare=valoare/3.6;
+        break;
+    case 9:
+        valoare=valoare/0.06;
+        break;
+    case 10:
+        valoare=valoare/0.001;
+        break;
+    case 11:
+        valoare=valoare/3600 ;
+        break;
+    case 12:
+        valoare=valoare/60 ;
+        break;
+
+    }
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+    case 2:
+        valoare=valoare*6000;
+        break;
+    case 3:
+        valoare=valoare*100;
+        break;
+    case 4:
+        valoare=valoare*11810.9771221;
+        break;
+    case 5:
+        valoare=valoare*196.8503937;
+        break;
+    case 6:
+        valoare=valoare*3.28083;
+        break;
+    case 7:
+        valoare=valoare*39.3700787;
+        break;
+    case 8:
+        valoare=valoare*3.6;
+        break;
+    case 9:
+        valoare=valoare*0.06;
+        break;
+    case 10:
+        valoare=valoare*0.001;
+        break;
+    case 11:
+        valoare=valoare*3600 ;
+        break;
+    case 12:
+        valoare=valoare*60 ;
+        break;
 
     }
 }
@@ -194,7 +369,7 @@ int main()
 {
     unsigned short alegere,unitate1,unitate2;
     long double valoare;
-    start:
+//start:
     cout << "CONVERTOR\n\n";
     cout << "Apasati '1' pentru Lungime.\nApasati '2' pentru Arie.\nApasati '3' pentru Volum.\nApasati '4' pentru Timp.\nApasati '5' pentru Viteza.\nApasati '6' pentru Temperatura.\nApasati '7' pentru Masa.\nApasati '8' pentru Energie.\nApasati '9' pentru Presiune.\nApasati '10' pentru Densitate.\nApasati '11' pentru Consum conbustibil.\n" << endl;
     cin >> alegere;
@@ -347,7 +522,7 @@ int main()
         cout<<endl;
         break;
     case 3:
-        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Litri.\nApasati '2' pentru Decilitri.\nApasati '3' pentru Centilitri.\nApasati '4' pentru Mililitri.\nApasati '5' pentru Centimetri.\nApasati '6' pentru Galoane.\nApasati '7' pentru Metri.\nApasati '8' pentru Toli.\nApasati '9' pentru Yarzi.\nApasati '10' pentru Decimetri.\nApasati '11' pentru Picioare.\n";
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Metri^3.\nApasati '2' pentru Centilitri.\nApasati '3' pentru Centimetri^3.\nApasati '4' pentru Decilitri.\nApasati '5' pentru Decimetri^3.\nApasati '6' pentru Picioare^3.\nApasati '7' pentru Galoane(UK).\nApasati '8' pentru Toli^3.\nApasati '9' pentru Litri.\nApasati '10' pentru Mililitri.\nApasati '11' pentru Yarzi^3.\n";
         cout<<"Din: ";
         cin >> unitate1;
         cout<<"In: ";
@@ -358,37 +533,37 @@ int main()
         switch (unitate1)
         {
         case 1:
-            cout<<"Litri";
+            cout<<"Metri^3";
             break;
         case 2:
-            cout<<"Decilitri";
-            break;
-        case 3:
             cout<<"Centilitri";
             break;
+        case 3:
+            cout<<"Centimetri^3";
+            break;
         case 4:
-            cout<<"Mililitri";
+            cout<<"Decilitri";
             break;
         case 5:
-            cout<<"Centimetri";
+            cout<<"Decimetri^2";
             break;
         case 6:
-            cout<<"Galoane";
+            cout<<"Picioare^3";
             break;
         case 7:
-            cout<<"Metri";
+            cout<<"Galoane(UK)";
             break;
         case 8:
-            cout<<"Toli";
+            cout<<"Toli^3";
             break;
         case 9:
-            cout<<"Yarzi";
+            cout<<"Litri";
             break;
         case 10:
-            cout<<"Decimetri";
+            cout<<"Mililitri";
             break;
         case 11:
-            cout<<"Picioare";
+            cout<<"Yarzi^3";
             break;
         }
         Volum(unitate1,unitate2,valoare);
@@ -396,40 +571,210 @@ int main()
         switch (unitate2)
         {
         case 1:
-            cout<<"Litri";
+            cout<<"Metri^3";
             break;
         case 2:
-            cout<<"Decilitri";
-            break;
-        case 3:
             cout<<"Centilitri";
             break;
+        case 3:
+            cout<<"Centimetri^3";
+            break;
         case 4:
-            cout<<"Mililitri";
+            cout<<"Decilitri";
             break;
         case 5:
-            cout<<"Centimetri";
+            cout<<"Decimetri^2";
             break;
         case 6:
-            cout<<"Galoane";
+            cout<<"Picioare^3";
             break;
         case 7:
-            cout<<"Metri";
+            cout<<"Galoane(UK)";
             break;
         case 8:
-            cout<<"Toli";
+            cout<<"Toli^3";
             break;
         case 9:
-            cout<<"Yarzi";
+            cout<<"Litri";
             break;
         case 10:
-            cout<<"Decimetri";
+            cout<<"Mililitri";
             break;
         case 11:
-            cout<<"Picioare";
+            cout<<"Yarzi^3";
+            break;
+        }
+    case 4:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Secunde.\nApasati '2' pentru Saptamani.\nApasati '3' pentru Zile.\nApasati '4' pentru Ore.\nApasati '5' pentru Minute.\nApasati '6' pentru Decisecunde.\nApasati '7' pentru Centisecunde.\nApasati '8' pentru Milisecunde.\nApasati '9' pentru Microsecunde.\nApasati '10' pentru Nanosecunde.\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Secunde";
+            break;
+        case 2:
+            cout<<"Saptamani";
+            break;
+        case 3:
+            cout<<"Zile";
+            break;
+        case 4:
+            cout<<"Ore";
+            break;
+        case 5:
+            cout<<"Minute";
+            break;
+        case 6:
+            cout<<"Decisecunde";
+            break;
+        case 7:
+            cout<<"Centisecunde";
+            break;
+        case 8:
+            cout<<"Milisecunde";
+            break;
+        case 9:
+            cout<<"Microsecunde";
+            break;
+        case 10:
+            cout<<"Nanosecunde";
+            break;
+        }
+        Timp(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Secunde";
+            break;
+        case 2:
+            cout<<"Saptamani";
+            break;
+        case 3:
+            cout<<"Zile";
+            break;
+        case 4:
+            cout<<"Ore";
+            break;
+        case 5:
+            cout<<"Minute";
+            break;
+        case 6:
+            cout<<"Decisecunde";
+            break;
+        case 7:
+            cout<<"Centisecunde";
+            break;
+        case 8:
+            cout<<"Milisecunde";
+            break;
+        case 9:
+            cout<<"Microsecunde";
+            break;
+        case 10:
+            cout<<"Nanosecunde";
             break;
         }
         cout<<endl;
+        break;
+    case 5:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Metri pe secunda.\nApasati '2' pentru Centimetri pe minut.\nApasati '3' pentru Centimetri pe secunda.\nApasati '4' pentru Picioare pe ora.\nApasati '5' pentru Picioare pe minut.\nApasati '6' pentru Picioare pe secunda.\nApasati '7' pentru Toli pe secunda.\nApasati '8' pentru Kilometri pe ora.\nApasati '9' pentru Kilometri pe minut.\nApasati '10' pentru Kilometri pe secunda.\nApasati '11' pentru Metri pe ora.\nApasati '12' pentru Metri pe minut.\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Metri pe secunda";
+            break;
+        case 2:
+            cout<<"Centimetri pe minut";
+            break;
+        case 3:
+            cout<<"Centimetri pe secunda";
+            break;
+        case 4:
+            cout<<"Picioare pe ora";
+            break;
+        case 5:
+            cout<<"Picioare pe minut";
+            break;
+        case 6:
+            cout<<"Picioare pe secunda";
+            break;
+        case 7:
+            cout<<"Toli pe secunda";
+            break;
+        case 8:
+            cout<<"Kilometri pe ora";
+            break;
+        case 9:
+            cout<<"Kilometri pe minut";
+            break;
+        case 10:
+            cout<<"Kilometri pe secunda";
+            break;
+        case 11:
+            cout<<"Metri pe ora";
+            break;
+        case 12:
+            cout<<"Metri pe minut";
+            break;
+        }
+        Viteza(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Metri pe secunda";
+            break;
+        case 2:
+            cout<<"Centimetri pe minut";
+            break;
+        case 3:
+            cout<<"Centimetri pe secunda";
+            break;
+        case 4:
+            cout<<"Picioare pe ora";
+            break;
+        case 5:
+            cout<<"Picioare pe minut";
+            break;
+        case 6:
+            cout<<"Picioare pe secunda";
+            break;
+        case 7:
+            cout<<"Toli pe secunda";
+            break;
+        case 8:
+            cout<<"Kilometri pe ora";
+            break;
+        case 9:
+            cout<<"Kilometri pe minut";
+            break;
+        case 10:
+            cout<<"Kilometri pe secunda";
+            break;
+        case 11:
+            cout<<"Metri pe ora";
+            break;
+        case 12:
+            cout<<"Metri pe minut";
+            break;
+        }
+        cout<<endl;
+        break;
+        /*cout<<endl;
         break;
         cout<<endl<<"Apasati '1' pentru a continua.\nApasati '0' pentru a iesi.";
         bool x;
@@ -440,7 +785,7 @@ int main()
             cin>>x;
         }
         if(x==1)
-            goto start;
+            goto start;*/
 
     }
     return 0;
