@@ -687,7 +687,7 @@ int main()
 {
     unsigned short alegere,unitate1,unitate2;
     long double valoare;
-    cout << "CONVERTOR\n\n";
+    cout << "       CONVERTOR\n\n";
 start:
     cout << "Apasati '1' pentru Lungime.\nApasati '2' pentru Arie.\nApasati '3' pentru Volum.\nApasati '4' pentru Timp.\nApasati '5' pentru Viteza.\nApasati '6' pentru Temperatura.\nApasati '7' pentru Masa.\nApasati '8' pentru Energie.\nApasati '9' pentru Presiune.\nApasati '10' pentru Densitate.\nApasati '11' pentru Consum conbustibil.\nApasati '12' pentru a iesi.\n" << endl;
     cin >> alegere;
