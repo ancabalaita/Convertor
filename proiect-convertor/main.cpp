@@ -597,6 +597,92 @@ void Presiune(unsigned short unitate1, unsigned short unitate2,long double &valo
     }
 }
 
+void Densitate(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=valoare*1000;
+        break;
+        case 3:
+        valoare=valoare;
+        break;
+        case 4:
+        valoare=valoare*0.001;
+        break;
+        case 5:
+        valoare=valoare*1000;
+        break;
+        case 6:
+        valoare=valoare*1000000;
+        break;
+        case 7:
+        valoare=valoare*1000000;
+        break;
+        case 8:
+        valoare=valoare*1000;
+        break;
+    }
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=valoare*0.001;
+        break;
+        case 3:
+        valoare=valoare;
+        break;
+        case 4:
+        valoare=valoare*1000;
+        break;
+        case 5:
+        valoare=valoare*0.001;
+        break;
+        case 6:
+        valoare=valoare*0.000001;
+        break;
+        case 7:
+        valoare=valoare*0.000001;
+        break;
+        case 8:
+        valoare=valoare*0.001;
+        break;
+    }
+}
+
+void Consum_combustibil(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=235.214583/valoare;
+        break;
+        case 3:
+        valoare=100/valoare;
+        break;
+    }
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=235.214583*valoare;
+        break;
+        case 3:
+        valoare=100*valoare;
+        break;
+    }
+}
+
 int main()
 {
     unsigned short alegere,unitate1,unitate2;
@@ -1267,6 +1353,112 @@ int main()
             break;
             case 13:
             cout<<"Funte pe tol patrat";
+            break;
+        }
+        cout<<endl;
+        break;
+
+        case 10:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Kilograme pe metru^3.\nApasati '2' pentru Grame pe centimetru^3.\nApasati '3' pentru Grame pe litru.\nApasati '4' pentru Grame pe metru^3.\nApasati '5' pentru Grame pe mililitru.\nApasati '6' pentru Grame pe milimetrumetru^3.\nApasati '7' pentru Kilograme pe centimetru^3.\nApasati '8' pentru Kilograme pe litru.\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Kilograme pe metru^3";
+            break;
+        case 2:
+            cout<<"Grame pe centimetru^3";
+            break;
+        case 3:
+            cout<<"Grame pe litru";
+            break;
+        case 4:
+            cout<<"Grame pe metru^3";
+            break;
+        case 5:
+            cout<<"Grame pe mililitru";
+            break;
+        case 6:
+            cout<<"Grame pe milimetru^3";
+            break;
+        case 7:
+            cout<<"Kilograme pe centimetru^3";
+            break;
+        case 8:
+            cout<<"Kilograme pe litru";
+            break;
+        }
+        Densitate(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Kilograme pe metru^3";
+            break;
+        case 2:
+            cout<<"Grame pe centimetru^3";
+            break;
+        case 3:
+            cout<<"Grame pe litru";
+            break;
+        case 4:
+            cout<<"Grame pe metru^3";
+            break;
+        case 5:
+            cout<<"Grame pe mililitru";
+            break;
+        case 6:
+            cout<<"Grame pe milimetru^3";
+            break;
+        case 7:
+            cout<<"Kilograme pe centimetru^3";
+            break;
+        case 8:
+            cout<<"Kilograme pe litru";
+            break;
+        }
+        cout<<endl;
+        break;
+
+        case 11:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Litru/100Kilometri.\nApasati '2' pentru Mile/Galon.\nApasati '3' pentru Kilometru/Litru.\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Litru/100Kilometri";
+            break;
+        case 2:
+            cout<<"Mile/Galon";
+            break;
+        case 3:
+            cout<<"Kilometru/Litru";
+            break;
+        }
+        Consum_combustibil(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Litru/100Kilometri";
+            break;
+        case 2:
+            cout<<"Mile/Galon";
+            break;
+        case 3:
+            cout<<"Kilometru/Litru";
             break;
         }
         cout<<endl;
