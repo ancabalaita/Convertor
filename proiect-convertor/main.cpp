@@ -449,28 +449,28 @@ void Energie(unsigned short unitate1, unsigned short unitate2,long double &valoa
     case 1:
         valoare=valoare;
         break;
-        case 2:
+    case 2:
         valoare=valoare*4.1868;
         break;
-        case 3:
+    case 3:
         valoare=valoare*1.3558179483314;
         break;
-        case 4:
+    case 4:
         valoare=valoare*0.11298482902;
         break;
-        case 5:
+    case 5:
         valoare=valoare*4186.8;
         break;
-        case 6:
+    case 6:
         valoare=valoare*1000;
         break;
-        case 7:
+    case 7:
         valoare=valoare*3600000;
         break;
-        case 8:
+    case 8:
         valoare=valoare*3600;
         break;
-        case 9:
+    case 9:
         valoare=valoare;
         break;
     }
@@ -479,30 +479,121 @@ void Energie(unsigned short unitate1, unsigned short unitate2,long double &valoa
     case 1:
         valoare=valoare;
         break;
-        case 2:
+    case 2:
         valoare=valoare*0.23884589662749595;
         break;
-        case 3:
+    case 3:
         valoare=valoare*0.7375621492772656;
         break;
-        case 4:
+    case 4:
         valoare=valoare*8.850745791923844;
         break;
-        case 5:
+    case 5:
         valoare=valoare*0.00023884589662749592;
         break;
-        case 6:
+    case 6:
         valoare=valoare*0.001;
         break;
-        case 7:
+    case 7:
         valoare=valoare*2.7777777777777776;
         break;
-        case 8:
+    case 8:
         valoare=valoare*0.0002777777777777778;
         break;
-        case 9:
+    case 9:
         valoare=valoare;
         break;
+    }
+}
+
+void Presiune(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=valoare*98066.5;
+        break;
+        case 3:
+        valoare=valoare*101325.2738;
+        break;
+        case 4:
+        valoare=valoare*98000;
+        break;
+        case 5:
+        valoare=valoare*248.84;
+        break;
+        case 6:
+        valoare=valoare*3386.38815789;
+        break;
+        case 7:
+        valoare=valoare*1000;
+        break;
+        case 8:
+        valoare=valoare*98;
+        break;
+        case 9:
+        valoare=valoare*9800;
+        break;
+        case 10:
+        valoare=valoare*9.8;
+        break;
+        case 11:
+        valoare=valoare*133.322368421;
+        break;
+        case 12:
+        valoare=valoare*1000000;
+        break;
+        case 13:
+        valoare=valoare*6894.75729317;
+        break;
+
+    }
+
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=valoare*0.000010197162129779282;
+        break;
+        case 3:
+        valoare=valoare*0.000009869205998632101;
+        break;
+        case 4:
+        valoare=valoare*0.000010204081632653061;
+        break;
+        case 5:
+        valoare=valoare*0.0040186465198521135;
+        break;
+        case 6:
+        valoare=valoare*0.00029529987508079483;
+        break;
+        case 7:
+        valoare=valoare*0.001;
+        break;
+        case 8:
+        valoare=valoare*0.01020408163265306;
+        break;
+        case 9:
+        valoare=valoare*0.00010204081632653062;
+        break;
+        case 10:
+        valoare=valoare*0.1020408163265306;
+        break;
+        case 11:
+        valoare=valoare*0.007500616827044659;
+        break;
+        case 12:
+        valoare=valoare*0.000001;
+        break;
+        case 13:
+        valoare=valoare*0.00014503773773017476;
+        break;
+
     }
 }
 
@@ -959,7 +1050,7 @@ int main()
         cout<<endl;
         break;
 
-        case 7:
+    case 7:
         cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Kilograme.\nApasati '2' pentru Grame.\nApasati '3' pentru Funte.\nApasati '4' pentru Miligrame.\nApasati '5' pentru Tone.\n";
         cout<<"Din: ";
         cin >> unitate1;
@@ -1009,7 +1100,7 @@ int main()
         cout<<endl;
         break;
 
-        case 8:
+    case 8:
         cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Jouli.\nApasati '2' pentru Calorii.\nApasati '3' pentru Picioare*Livre-forta.\nApasati '4' pentru Toli*Livre-forta.\nApasati '5' pentru Kilocalorii.\nApasati '6' pentru Kilojouli.\nApasati '7' pentru Kilowatti*Ora.\nApasati '8' pentru Watti*Ora.\nApasati '9' pentru Watti*Secunda.\n";
         cout<<"Din: ";
         cin >> unitate1;
@@ -1078,6 +1169,104 @@ int main()
             break;
         case 9:
             cout<<"Watti*Secunda";
+            break;
+        }
+        cout<<endl;
+        break;
+
+        case 9:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Pascali.\nApasati '2' pentru Atmosfere tehnice.\nApasati '3' pentru Atmosfere Standard.\nApasati '4' pentru Bari.\nApasati '5' pentru Toli coloana de apa.\nApasati '6' pentru Toli coloana de mercur.\nApasati '7' pentru Kilopascali.\nApasati '8' pentru Milibari.\nApasati '9' pentru Metri coloana de apa.\nApasati '10' pentru Milimetri coloana de apa.\nApasati '11' pentru Milimetri coloana de mercur.\nApasati '12' pentru Megapascali.\nApasati '13' pentru Funte pe tol patrat.\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Pascali";
+            break;
+        case 2:
+            cout<<"Atmosfere tehnice";
+            break;
+        case 3:
+            cout<<"Atmosfere standard";
+            break;
+        case 4:
+            cout<<"Bari";
+            break;
+        case 5:
+            cout<<"Toli coloana de apa";
+            break;
+        case 6:
+            cout<<"Toli coloana de mercur";
+            break;
+        case 7:
+            cout<<"Kilopascali";
+            break;
+        case 8:
+            cout<<"Milibari";
+            break;
+        case 9:
+            cout<<"Metri coloana de apa";
+            break;
+        case 10:
+            cout<<"Milimetri coloana de apa";
+            break;
+            case 11:
+            cout<<"Milimetri coloana de mercur";
+            break;
+            case 12:
+            cout<<"Megapascali";
+            break;
+            case 13:
+            cout<<"Funte pe tol patrat";
+            break;
+        }
+        Presiune(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Pascali";
+            break;
+        case 2:
+            cout<<"Atmosfere tehnice";
+            break;
+        case 3:
+            cout<<"Atmosfere standard";
+            break;
+        case 4:
+            cout<<"Bari";
+            break;
+        case 5:
+            cout<<"Toli coloana de apa";
+            break;
+        case 6:
+            cout<<"Toli coloana de mercur";
+            break;
+        case 7:
+            cout<<"Kilopascali";
+            break;
+        case 8:
+            cout<<"Milibari";
+            break;
+        case 9:
+            cout<<"Metri coloana de apa";
+            break;
+        case 10:
+            cout<<"Milimetri coloana de apa";
+            break;
+            case 11:
+            cout<<"Milimetri coloana de mercur";
+            break;
+            case 12:
+            cout<<"Megapascali";
+            break;
+            case 13:
+            cout<<"Funte pe tol patrat";
             break;
         }
         cout<<endl;
