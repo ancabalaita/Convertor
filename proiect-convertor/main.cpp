@@ -219,31 +219,31 @@ void Timp(unsigned short unitate1, unsigned short unitate2,long double &valoare)
         valoare=valoare;
         break;
     case 2:
-        valoare=valoare/1.65344e-6;
+        valoare=valoare*604800;
         break;
     case 3:
-        valoare=valoare/1.15741e-5;
+        valoare=valoare*86400;
         break;
     case 4:
-        valoare=valoare/0.000277778;
+        valoare=valoare*3600;
         break;
     case 5:
-        valoare=valoare/0.166667;
+        valoare=valoare*60;
         break;
     case 6:
-        valoare=valoare/10;
+        valoare=valoare*0.1;
         break;
     case 7:
-        valoare=valoare/100;
+        valoare=valoare*0.01;
         break;
     case 8:
-        valoare=valoare/1000;
+        valoare=valoare*0.001;
         break;
     case 9:
-        valoare=valoare/1000000;
+        valoare=valoare*0.000001;
         break;
     case 10:
-        valoare=valoare/1000000000;
+        valoare=valoare*1e-9;
         break;
     }
 
@@ -253,16 +253,16 @@ void Timp(unsigned short unitate1, unsigned short unitate2,long double &valoare)
         valoare=valoare;
         break;
     case 2:
-        valoare=valoare*1.65344e-6;
+        valoare=valoare*0.0000016534391534391535;
         break;
     case 3:
-        valoare=valoare*1.15741e-5;
+        valoare=valoare*0.000011574074074074073;
         break;
     case 4:
-        valoare=valoare*0.000277778;
+        valoare=valoare*0.0002777777777777778;
         break;
     case 5:
-        valoare=valoare*0.166667;
+        valoare=valoare*0.016666666666666666;
         break;
     case 6:
         valoare=valoare*10;
@@ -365,6 +365,33 @@ void Viteza(unsigned short unitate1, unsigned short unitate2,long double &valoar
 
     }
 }
+void Temperatura(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+    case 2:
+        valoare=(valoare-32)*5/9;
+    case 3:
+        valoare=valoare-273.15;
+    case 4:
+        valoare=(valoare-491.67)*5/9;
+    }
+
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+    case 2:
+        valoare=valoare*9/5+32;
+    case 3:
+        valoare=valoare+273.15;
+    case 4:
+        valoare=(valoare+273.15)*9/5;
+    }
+}
+
 int main()
 {
     unsigned short alegere,unitate1,unitate2;
@@ -770,6 +797,49 @@ int main()
             break;
         case 12:
             cout<<"Metri pe minut";
+            break;
+        }
+        cout<<endl;
+        break;
+        case 6:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Grade Celsius.\nApasati '2' pentru Grade Fahrenheit.\nApasati '3' pentru Grade Kelvin.\nApasati '4' pentru Grade Rankine\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Grade Celsius";
+            break;
+        case 2:
+            cout<<"Grade Fahrenheit";
+            break;
+        case 3:
+            cout<<"Grade Kelvin";
+            break;
+        case 4:
+            cout<<"Grade Rankine";
+            break;
+        }
+        Temperatura(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Grade Celsius";
+            break;
+        case 2:
+            cout<<"Grade Fahrenheit";
+            break;
+        case 3:
+            cout<<"Grade Kelvin";
+            break;
+        case 4:
+            cout<<"Grade Rankine";
             break;
         }
         cout<<endl;
