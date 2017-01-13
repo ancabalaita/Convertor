@@ -371,24 +371,138 @@ void Temperatura(unsigned short unitate1, unsigned short unitate2,long double &v
     {
     case 1:
         valoare=valoare;
+        break;
     case 2:
-        valoare=(valoare-32)*5/9;
+        valoare=(valoare-32)/1.8;
+        break;
     case 3:
         valoare=valoare-273.15;
+        break;
     case 4:
-        valoare=(valoare-491.67)*5/9;
+        valoare=(valoare-491.67)/1.8;
+        break;
     }
 
     switch(unitate2)
     {
     case 1:
         valoare=valoare;
+        break;
     case 2:
-        valoare=valoare*9/5+32;
+        valoare=valoare*1.8+32;
+        break;
     case 3:
         valoare=valoare+273.15;
+        break;
     case 4:
-        valoare=(valoare+273.15)*9/5;
+        valoare=(valoare+491.67)*1.8;
+        break;
+    }
+}
+
+void Masa(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+    case 2:
+        valoare=valoare*0.001;
+        break;
+    case 3:
+        valoare=valoare*0.453592;
+        break;
+    case 4:
+        valoare=valoare*0.000001;
+        break;
+    case 5:
+        valoare=valoare*1000;
+        break;
+
+    }
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+    case 2:
+        valoare=valoare*1000;
+        break;
+    case 3:
+        valoare=valoare*2.2046244201837775;
+        break;
+    case 4:
+        valoare=valoare*1000000;
+        break;
+    case 5:
+        valoare=valoare*0.001;
+        break;
+
+    }
+}
+
+void Energie(unsigned short unitate1, unsigned short unitate2,long double &valoare)
+{
+    switch(unitate1)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=valoare*4.1868;
+        break;
+        case 3:
+        valoare=valoare*1.3558179483314;
+        break;
+        case 4:
+        valoare=valoare*0.11298482902;
+        break;
+        case 5:
+        valoare=valoare*4186.8;
+        break;
+        case 6:
+        valoare=valoare*1000;
+        break;
+        case 7:
+        valoare=valoare*3600000;
+        break;
+        case 8:
+        valoare=valoare*3600;
+        break;
+        case 9:
+        valoare=valoare;
+        break;
+    }
+    switch(unitate2)
+    {
+    case 1:
+        valoare=valoare;
+        break;
+        case 2:
+        valoare=valoare*0.23884589662749595;
+        break;
+        case 3:
+        valoare=valoare*0.7375621492772656;
+        break;
+        case 4:
+        valoare=valoare*8.850745791923844;
+        break;
+        case 5:
+        valoare=valoare*0.00023884589662749592;
+        break;
+        case 6:
+        valoare=valoare*0.001;
+        break;
+        case 7:
+        valoare=valoare*2.7777777777777776;
+        break;
+        case 8:
+        valoare=valoare*0.0002777777777777778;
+        break;
+        case 9:
+        valoare=valoare;
+        break;
     }
 }
 
@@ -801,7 +915,7 @@ int main()
         }
         cout<<endl;
         break;
-        case 6:
+    case 6:
         cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Grade Celsius.\nApasati '2' pentru Grade Fahrenheit.\nApasati '3' pentru Grade Kelvin.\nApasati '4' pentru Grade Rankine\n";
         cout<<"Din: ";
         cin >> unitate1;
@@ -840,6 +954,130 @@ int main()
             break;
         case 4:
             cout<<"Grade Rankine";
+            break;
+        }
+        cout<<endl;
+        break;
+
+        case 7:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Kilograme.\nApasati '2' pentru Grame.\nApasati '3' pentru Funte.\nApasati '4' pentru Miligrame.\nApasati '5' pentru Tone.\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Kilograme";
+            break;
+        case 2:
+            cout<<"Grame";
+            break;
+        case 3:
+            cout<<"Funte";
+            break;
+        case 4:
+            cout<<"Miligrame";
+            break;
+        case 5:
+            cout<<"Tone";
+            break;
+        }
+        Masa(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Kilograme";
+            break;
+        case 2:
+            cout<<"Grame";
+            break;
+        case 3:
+            cout<<"Funte";
+            break;
+        case 4:
+            cout<<"Miligrame";
+            break;
+        case 5:
+            cout<<"Tone";
+            break;
+        }
+        cout<<endl;
+        break;
+
+        case 8:
+        cout <<"Alegeti unitatile de masura:\n\nApasati '1' pentru Jouli.\nApasati '2' pentru Calorii.\nApasati '3' pentru Picioare*Livre-forta.\nApasati '4' pentru Toli*Livre-forta.\nApasati '5' pentru Kilocalorii.\nApasati '6' pentru Kilojouli.\nApasati '7' pentru Kilowatti*Ora.\nApasati '8' pentru Watti*Ora.\nApasati '9' pentru Watti*Secunda.\n";
+        cout<<"Din: ";
+        cin >> unitate1;
+        cout<<"In: ";
+        cin>> unitate2;
+        cout<<"Introduceti valoarea: ";
+        cin>>valoare;
+        cout<<valoare<<" ";
+        switch (unitate1)
+        {
+        case 1:
+            cout<<"Jouli";
+            break;
+        case 2:
+            cout<<"Calorii";
+            break;
+        case 3:
+            cout<<"Picioare*Livre-forta";
+            break;
+        case 4:
+            cout<<"Toli*Livre-forta";
+            break;
+        case 5:
+            cout<<"Kilocalorii";
+            break;
+        case 6:
+            cout<<"Kilojouli";
+            break;
+        case 7:
+            cout<<"Kilowatti*Ora";
+            break;
+        case 8:
+            cout<<"Watti*Ora";
+            break;
+        case 9:
+            cout<<"Watti*Secunda";
+            break;
+        }
+        Energie(unitate1,unitate2,valoare);
+        cout<<" = "<<valoare<<" ";
+        switch (unitate2)
+        {
+        case 1:
+            cout<<"Jouli";
+            break;
+        case 2:
+            cout<<"Calorii";
+            break;
+        case 3:
+            cout<<"Picioare*Livre-forta";
+            break;
+        case 4:
+            cout<<"Toli*Livre-forta";
+            break;
+        case 5:
+            cout<<"Kilocalorii";
+            break;
+        case 6:
+            cout<<"Kilojouli";
+            break;
+        case 7:
+            cout<<"Kilowatti*Ora";
+            break;
+        case 8:
+            cout<<"Watti*Ora";
+            break;
+        case 9:
+            cout<<"Watti*Secunda";
             break;
         }
         cout<<endl;
